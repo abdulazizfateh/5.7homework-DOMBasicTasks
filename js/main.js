@@ -25,7 +25,6 @@ counterBtnEl.addEventListener("dblclick", () => {
 const userSeemoreBtnEl = document.querySelector(".user_seemore_btn");
 const userInfo = document.querySelector(".user_info");
 
-let seeingPref = JSON.parse(localStorage.getItem("see_pref")) || "See more";
 userSeemoreBtnEl.innerHTML = "See more";
 let count = 0;
 
@@ -33,12 +32,9 @@ userSeemoreBtnEl.addEventListener("click", () => {
     count++;
     userInfo.classList.toggle("show");
     if (count % 2 === 0) {
-        localStorage.setItem("see_pref", JSON.stringify("See more"));
         userSeemoreBtnEl.innerHTML = "See more";
     } else {
-        localStorage.setItem("see_pref", JSON.stringify("See less"));
         userSeemoreBtnEl.innerHTML = "See less";
-        isShowed = true;
     }
 })
 
