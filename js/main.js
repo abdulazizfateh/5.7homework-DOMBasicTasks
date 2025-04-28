@@ -60,7 +60,7 @@ createFormEl.addEventListener("submit", (e) => {
     <tr>
         <td>${number}</td>
         <td>${inputFirstName.value}</td>
-        <td>${inputFirstName.value}</td>
+        <td>${inputLastName.value}</td>
     </tr>`
     tBodyEl.appendChild(tr);
     inputFirstName.value = "";
